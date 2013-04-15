@@ -9,8 +9,23 @@
     tools:context=".OrderActivity" >
 
     <TextView
+        android:id="@+id/txtOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="34dp"
+        android:text="order" />
+
+    <Button
+        android:id="@+id/btnTake"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="80dp"
+        android:text="Take" />
 
 </RelativeLayout>
