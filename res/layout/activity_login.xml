@@ -8,9 +8,63 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".LoginActivity" >
 
-    <TextView
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="39dp"
+        android:layout_marginLeft="74dp"
+        android:text="Exit" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnExit"
+        android:layout_alignBottom="@+id/btnExit"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="100dp"
+        android:text="Login" />
+
+    <EditText
+        android:id="@+id/edtLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_above="@+id/edtPass"
+        android:layout_alignLeft="@+id/btnExit"
+        android:layout_alignRight="@+id/btnLogin"
+        android:layout_marginBottom="34dp"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/edtPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnExit"
+        android:layout_alignLeft="@+id/edtLogin"
+        android:layout_alignRight="@+id/edtLogin"
+        android:layout_marginBottom="51dp"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/txtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edtLogin"
+        android:layout_alignBottom="@+id/edtLogin"
+        android:layout_toLeftOf="@+id/edtLogin"
+        android:text="Login" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edtPass"
+        android:layout_alignBottom="@+id/edtPass"
+        android:layout_alignRight="@+id/txtView"
+        android:text="Password" />
 
 </RelativeLayout>
