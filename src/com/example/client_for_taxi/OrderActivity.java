@@ -10,9 +10,11 @@ import android.widget.TextView;
 
 public class OrderActivity extends Activity implements OnClickListener {
 	Button btnTake;
+	Button btnCancel;
 	TextView txtOrder;
+	TextView txtPhone;
 	Intent intentMainMenu;
-	
+	boolean take = false;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -20,19 +22,34 @@ public class OrderActivity extends Activity implements OnClickListener {
 		intentMainMenu = new Intent(this, MainMenuActivity.class);
         btnTake = (Button) findViewById(R.id.btnTake);
         btnTake.setOnClickListener(this);
+        btnCancel = (Button) findViewById(R.id.btnCancel);
+        btnCancel.setOnClickListener(this);
         txtOrder = (TextView) findViewById(R.id.txtOrder);
+        txtPhone = (TextView) findViewById(R.id.txtPhone);
 	}
 
 	@Override
 	public void onClick(View v) {
 		 switch (v.getId()) {
-	        	// Отмена заказа, нажимается в то случае если клиент отменил заказ
-	        	// или не пришел на назначенное место
-	        	// также идет запрос к БД
+	        	// Подтверждение выбора заказа (Отправка Бд)
 	        case R.id.btnTake:
-	        	// Выбор заказа!
-	        	finish();
-	    	    startActivity(intentMainMenu);
+	        	if (!take){
+	        		take = true;
+	        		btnTake.setText("Complite");
+	        		btnCancel.setVisibility(1);
+	        		txtPhone.setVisibility(1);
+	        	} else {
+	        		// Заказ выполнен (отправка бд на выполнение)
+	        		finish();
+	    	    	startActivity(intentMainMenu);
+	        	}
+	        	break;
+	        case R.id.btnCancel:
+	        	if (take){
+	        	//Выплняет при случаях если Клиент отменил заказ, или не пришел на него
+	        		finish();
+	        		startActivity(intentMainMenu);
+	        	}
 	        	break;
 		 }
 	}

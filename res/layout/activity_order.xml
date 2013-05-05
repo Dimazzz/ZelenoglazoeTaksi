@@ -16,16 +16,39 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="34dp"
         android:layout_marginTop="34dp"
-        android:text="order" />
+        android:text="Улица Такая, дом такой"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/btnTake"
         android:layout_width="100dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="60dp"
         android:layout_marginRight="80dp"
         android:text="Take" />
+
+    <TextView
+        android:id="@+id/txtPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtOrder"
+        android:layout_below="@+id/txtOrder"
+        android:layout_marginTop="41dp"
+        android:textSize="20dp" 
+        android:visibility="invisible"
+    	android:text="Телефон такой"/>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnTake"
+        android:layout_alignBottom="@+id/btnTake"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="80dp"
+        android:text="Cancel"
+        android:visibility="invisible" />
 
 </RelativeLayout>

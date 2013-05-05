@@ -37,9 +37,6 @@ public class LoginActivity extends Activity implements OnClickListener {
       	    	startActivity(intentMainMenu);
         	}
       	    break;
-        case R.id.btnExit:
-        	finish();
-        	break;
         }
-      }
+    }
 }

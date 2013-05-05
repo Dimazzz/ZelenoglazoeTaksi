@@ -8,63 +8,50 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".LoginActivity" >
 
-    <Button
-        android:id="@+id/btnExit"
-        android:layout_width="100dp"
+    <EditText
+        android:id="@+id/edtLogin"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp">
+    </EditText>
+
+    <EditText
+        android:id="@+id/edtPass"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="39dp"
-        android:layout_marginLeft="74dp"
-        android:text="Exit" />
+        android:inputType="textPassword" 
+        android:layout_marginTop ="120dp"
+        android:layout_marginLeft="50dp">
+	</EditText>
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnExit"
-        android:layout_alignBottom="@+id/btnExit"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/edtPass"
+        android:layout_marginBottom="42dp"
         android:text="Login" />
-
-    <EditText
-        android:id="@+id/edtLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/edtPass"
-        android:layout_alignLeft="@+id/btnExit"
-        android:layout_alignRight="@+id/btnLogin"
-        android:layout_marginBottom="34dp"
-        android:ems="10" />
-
-    <EditText
-        android:id="@+id/edtPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btnExit"
-        android:layout_alignLeft="@+id/edtLogin"
-        android:layout_alignRight="@+id/edtLogin"
-        android:layout_marginBottom="51dp"
-        android:ems="10"
-        android:inputType="textPassword" />
 
     <TextView
         android:id="@+id/txtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/edtLogin"
-        android:layout_alignBottom="@+id/edtLogin"
-        android:layout_toLeftOf="@+id/edtLogin"
+        android:layout_alignLeft="@+id/edtLogin"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
         android:text="Login" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/edtPass"
-        android:layout_alignBottom="@+id/edtPass"
-        android:layout_alignRight="@+id/txtView"
+        android:layout_alignLeft="@+id/edtPass"
+        android:layout_below="@+id/edtLogin"
+        android:layout_marginTop="20dp"
         android:text="Password" />
+
+
 
 </RelativeLayout>
