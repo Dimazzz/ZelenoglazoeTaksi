@@ -12,14 +12,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 /*
- * id   	 запрос
- * 1 	Логирование
- * 2	запрос таблиц
- * 3 	взял заказ
- * 4 	выполнил заказ (статус свободен)
- * 5	клиент отменил заказ(типо не пришел)(статус свободен)
- *  
+ * id   	 запрос				что отправлять 		принимаю
+ * 1 	Логирование 			(2 стринга)
+ * 2	запрос таблицы 				 2(int)			(List <>)
+ * 3 	взял заказ                   3(int)
+ * 4 	выполнил заказ "свободен"    4(int)
+ * 5	клиент отменил заказ		 5(int)
+ *        (типо не пришел)(статус свободен)
  */
+
 public class MainMenuActivity extends ListActivity{
 	Menu myMenu;  
 	 
